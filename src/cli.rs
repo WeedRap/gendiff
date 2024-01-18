@@ -17,5 +17,9 @@ pub fn parse_cli_args() -> (String, String, String) {
     let first_file = matches.get_one::<String>("first_file").unwrap();
     let second_file = matches.get_one::<String>("second_file").unwrap();
     let output_format = matches.get_one::<String>("format").unwrap();
-    (first_file.to_string(), second_file.to_string(), output_format.to_string())
+    (
+        first_file.to_string(),
+        second_file.to_string(),
+        output_format.to_string(),
+    )
 }
