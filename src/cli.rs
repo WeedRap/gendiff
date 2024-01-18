@@ -1,6 +1,6 @@
 use clap::{command, Arg};
 
-pub fn parse_args() -> (String, String, String) {
+pub fn parse_cli_args() -> (String, String, String) {
     let matches = command!()
         .about("Compares two configuration files and shows a difference.")
         .arg(Arg::new("first_file").required(true))
@@ -10,7 +10,7 @@ pub fn parse_args() -> (String, String, String) {
                 .help("Set the format of output")
                 .short('f')
                 .long("format")
-                .default_value(""),
+                .default_value("stylish"),
         )
         .get_matches();
 
